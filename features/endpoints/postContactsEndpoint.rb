@@ -1,8 +1,13 @@
+def generateRandomString
+    @len = SecureRandom.alphanumeric(5)
+end
+
 def sendJsonPostRequest
+    generateRandomString
     @postBody = {
         "name": @name,
-        "last_name": @lastname,
-        "email": @email,
+        "last_name": @lastName,
+        "email": "#{@len}@gmail.com",
         "age": @age,
         "phone": @phone,
         "address": @adress,
@@ -41,4 +46,8 @@ end
 
 def setCityOfTheContact(city)
     @city = city
+end
+
+def validateStatusCode(status)
+    expect(@postResponse.code).to eq status
 end

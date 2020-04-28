@@ -4,8 +4,6 @@ end
 
 def makePostRequisition
     @postResponse = Contato.post("/contacts/", body: @postBody)
-    puts @postResponse
-    puts @postBody
 end
 
 def validateIdOfContact(id)

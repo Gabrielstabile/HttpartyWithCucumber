@@ -36,5 +36,5 @@ When("the user defines a {string} in the name field of the contact") do |name|
   end
   
   Then("the status code should be {int}") do |int|
-       
+       validateStatusCode(int)
   end
