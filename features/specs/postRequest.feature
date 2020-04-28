@@ -1,4 +1,4 @@
-@post
+ @post
 Feature: Make a POST request
 
 Scenario Outline: Validate creation of a new contact in the list
