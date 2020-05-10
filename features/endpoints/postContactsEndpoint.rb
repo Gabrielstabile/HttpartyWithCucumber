@@ -2,12 +2,26 @@ def generateRandomString
     @len = SecureRandom.alphanumeric(5)
 end
 
-def sendJsonPostRequest
+def sendJsonPostRequestRandomEmail
     generateRandomString
     @postBody = {
         "name": @name,
         "last_name": @lastName,
         "email": "#{@len}@gmail.com",
+        "age": @age,
+        "phone": @phone,
+        "address": @adress,
+        "state": @state,
+        "city": @city
+    }.to_json
+end
+
+def sendJsonPostRequest
+    generateRandomString
+    @postBody = {
+        "name": @name,
+        "last_name": @lastName,
+        "email": @email,
         "age": @age,
         "phone": @phone,
         "address": @adress,
