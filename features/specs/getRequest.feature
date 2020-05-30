@@ -7,5 +7,5 @@ Feature: Some tests with the GET method
 
         Examples:
         | ID | Expected ID  |
-        | 33 |     33       |
+        | 24 |     24       |
 

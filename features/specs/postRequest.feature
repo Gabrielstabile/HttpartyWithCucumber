@@ -1,6 +1,7 @@
  @post
 Feature: Make a POST request
 
+@criarContato
 Scenario Outline: Validate creation of a new contact in the list
     Given the user is logged in API URL
     When the user defines a "<name>" in the name field of the contact

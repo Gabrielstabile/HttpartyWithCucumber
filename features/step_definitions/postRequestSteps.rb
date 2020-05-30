@@ -30,7 +30,7 @@ When("the user defines a {string} in the name field of the contact") do |name|
      setCityOfTheContact(city) 
   end   
   
-  When("the user makes the post request random email") do
+  When("the user makes the post request with random email") do
      sendJsonPostRequestRandomEmail
      makePostRequisition
   end
