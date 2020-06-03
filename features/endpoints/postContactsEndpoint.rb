@@ -3,11 +3,11 @@ def generateRandomString
 end
 
 def sendJsonPostRequestRandomEmail
-    generateRandomString
+    generateRandomEmail
     @postBody = {
         "name": @name,
         "last_name": @lastName,
-        "email": "#{@len}@gmail.com",
+        "email": @randomEmail,
         "age": @age,
         "phone": @phone,
         "address": @adress,
@@ -17,7 +17,6 @@ def sendJsonPostRequestRandomEmail
 end
 
 def sendJsonPostRequest
-    generateRandomString
     @postBody = {
         "name": @name,
         "last_name": @lastName,
