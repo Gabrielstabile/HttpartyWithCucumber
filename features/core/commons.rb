@@ -14,3 +14,7 @@ end
 def generateRandomEmail
     @randomEmail = Faker::Internet.email
 end
+
+def generateRandomString
+    @len = SecureRandom.alphanumeric(5)
+end

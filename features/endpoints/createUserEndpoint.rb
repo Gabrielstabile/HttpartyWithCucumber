@@ -5,8 +5,8 @@ def createUser
     @postBody = {
         user: {
             email: @randomEmail,
-            password: password,
-            password_confirmation: password
+            password: @password,
+            password_confirmation: @password
         }
     }.to_json
 
@@ -17,7 +17,7 @@ def loginUser
     @bodyLogin = {
         session: {
             email: @randomEmail,
-            password: password
+            password: @password
         }
     }.to_json
 
@@ -28,5 +28,4 @@ def loginUser
     }
 
     @postResponse = CriarToken.post('/sessions/', body: @bodyLogin, headers: @headerLogin)
-    puts @postResponse
 end
